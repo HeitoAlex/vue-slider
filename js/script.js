@@ -38,7 +38,7 @@ const { createApp } = Vue
     createApp({
         data() {
         return {
-            image: activeImage.image
+            image: activeImage[0]
         }
     },
     methods: {
