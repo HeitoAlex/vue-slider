@@ -23,3 +23,23 @@ const slides = [
 ];
 
 console.log(slides);
+
+const activeImage = slides
+
+const { createApp } = Vue
+
+    createApp({
+        data() {
+        return {
+            image: activeImage.image
+        }
+    },
+    methods: {
+        next: function(){
+            
+        },
+        prev: function(){
+            
+        } 
+    }
+    }).mount('#app')
