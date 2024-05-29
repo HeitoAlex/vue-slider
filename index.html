@@ -13,18 +13,17 @@
     <div id="app">
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
+                <i @click="prev">&leftarrow;</i>
                 <div class="item">
-                    <img :src="image" alt="Spiderman" />
+                    <img :src="slides[activeSlideIndex].image" alt="Spiderman" />
                     <div class="text">
-                        <h3>Spiderman</h3>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
-                            tempore aliquid deleniti aut
-                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
-                            corporis.
+                        <h3 :title="slides[activeSlideIndex].title"></h3>
+                        <p :text="slides[activeSlideIndex].text">
+                            
                         </p>
                     </div>
                 </div>
+                <i @click="next">&rightarrow;</i>
             </div>
         </div>
 

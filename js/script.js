@@ -23,30 +23,38 @@ const slides = [
 ];
 
 console.log(slides);
-const activeImage = [];
-
-slides.forEach(function(obj){
-    image = obj.image;
-    activeImage.push(image);
-})
-
-console.log(activeImage)
-
 
 const { createApp } = Vue
 
     createApp({
         data() {
         return {
-            image: activeImage[0]
+            
+            slides: slides,
+            activeSlideIndex: 0
         }
     },
     methods: {
-        next: function(){
+        next(){
+            
+            if (this.activeSlideIndex >= slides.length - 1) {
+                    this.activeSlideIndex = 0;
+                } else {
+                    this.activeSlideIndex++;
+                }
+            
+            console.log(this.activeSlideIndex);
             
         },
-        prev: function(){
+        prev(){
             
+            if (this.activeSlideIndex <= 0) {
+                this.activeSlideIndex = slides.length - 1;
+            } else {
+                this.activeSlideIndex--;
+            }
+        
+            console.log(this.activeSlideIndex)
         } 
     }
     }).mount('#app')
