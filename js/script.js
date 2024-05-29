@@ -23,8 +23,15 @@ const slides = [
 ];
 
 console.log(slides);
+const activeImage = [];
 
-const activeImage = slides
+slides.forEach(function(obj){
+    image = obj.image;
+    activeImage.push(image);
+})
+
+console.log(activeImage)
+
 
 const { createApp } = Vue
 
