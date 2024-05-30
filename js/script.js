@@ -29,9 +29,9 @@ const { createApp } = Vue
     createApp({
         data() {
         return {
-            
+            activeSlideIndex: 0,
             slides: slides,
-            activeSlideIndex: 0
+            
         }
     },
     methods: {
